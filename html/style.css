@@ -15,6 +15,11 @@ a {
 }
 
 .others button {
+    
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    cursor: pointer;
     border: none;
 }
 
@@ -27,7 +32,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 12px 50px;
-    height: 70px;
+    height: 75px;
     align-items: center;
     position: fixed;
     top: 0;
@@ -76,7 +81,7 @@ header:hover {
 }
 
 .menu li a {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
 
 }
@@ -86,10 +91,24 @@ header:hover {
     display: flex;
 }
 
-.others li {
-    padding: 0 10px;
+.others > li {
+    padding: 0 12px;
+    position: relative;
 }
-
+.others > li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.others > li:last-child::after {
+    display: none;
+}
 .others>li:first-child {
     position: relative;
 }
@@ -100,6 +119,14 @@ header:hover {
     border-bottom: 1px solid #333;
     background: transparent;
     outline: none;
+    width: 240px;
+    height: 30px;
+}
+.others a {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* .others > li :first-child input{
@@ -110,7 +137,8 @@ header:hover {
 .others>li:first-child button {
     position: absolute;
     right: 15px;
-
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #Slider {
@@ -215,6 +243,9 @@ footer {
 .footer-top li:last-child a {
     margin-right: 12px ;
     color: #333;
+}
+.footer-top li:last-child::after {
+    display: none;
 }
 .footer-center {
     text-align: center;
