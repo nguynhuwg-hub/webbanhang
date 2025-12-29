@@ -34,9 +34,11 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
-    background: rgba(225, 225, 225, 0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
-
+header:hover {
+    background: rgba(255, 255, 255, 1);
+}
 .logo {
     flex: 1;
 
@@ -96,6 +98,8 @@ header {
     border: none;
     outline: none;
     border-bottom: 1px solid #333;
+    background: transparent;
+    outline: none;
 }
 
 /* .others > li :first-child input{
