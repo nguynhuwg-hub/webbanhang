@@ -374,7 +374,7 @@ footer {
     position: relative;
 }
 .footer-top li::after {
-    content: "";
+    content: "5";
     display: block;
     width: 1px;
     height: 80%;

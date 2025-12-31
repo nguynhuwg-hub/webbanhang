@@ -1,3 +1,14 @@
+<?php
+$conn = mysqli_connect("localhost","root","","testdb");
+mysqli_set_charset($conn,"utf8");
+
+/* Lấy danh mục từ URL */
+$category = isset($_GET['cat']) ? $_GET['cat'] : 'NỮ';
+
+/* Query sản phẩm */
+$sql = "SELECT * FROM products WHERE category='$category'";
+$result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,7 +101,7 @@
 
                         </UL>
                     </li>
-                    <li class="cartegory-left-li"> <a href="">TRÊ EM </a>
+                    <li class="cartegory-left-li"> <a href="">TRẺ EM </a>
                         <UL>
                             <li><a href="">HÀNG NỮ MỚI VỀ</a></li>
                             <li><a href="">HÀNG NỮ MỚI VỀ</a></li>
@@ -176,6 +187,7 @@
 
 
                 <div class="cartegory-right-content">
+                    
                     <div class="product-item">
                         <img src="images/vn-11134207-820l4-mfjtkvv2i87g1c_tn.webp">
                         <h3>ÁO LỤA DÁNG PEPLUM</h3>
